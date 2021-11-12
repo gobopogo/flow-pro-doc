@@ -9,10 +9,9 @@ module.exports = {
     '@vssue/vuepress-plugin-vssue': {
         // 设置 `platform` 而不是 `api`
         platform: 'github-v4',
-  
         // 其他的 Vssue 配置
         owner: 'dong-jianbin',
-        repo: 'docment',
+        repo: 'flow-pro-doc',
         clientId: '11a9cb3163992c38761e',
         clientSecret: 'e22bf21eda8143efde9d96eb53ee8754986e8265',
         autoCreateIssue: true,
