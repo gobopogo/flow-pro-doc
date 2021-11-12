@@ -2,6 +2,9 @@ const nav = require('./config/nav.js');
 const base = require('../../base.js');
 const htmlModules = require('./config/htmlModules.js');
 
+const moment = require('moment')
+moment.locale('zh-cn')
+
 module.exports = {
   title: "flow-pro",
   description: '一款简洁高效的工作流系统 低代码平台',
@@ -156,13 +159,14 @@ module.exports = {
     ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
+      // {
+      //   transformer: (timestamp, lang) => {
+      //     const dayjs = require('dayjs') // https://day.js.org/
+      //     return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+      //   },
+      // }
       {
-        transformer: (timestamp, lang) => {
-          const dayjs = require('dayjs')
-          require('dayjs/locale/de')
-          dayjs.locale('zh-cn')
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
-        },
+        transformer: timestamp => moment(timestamp).format('LLLL')  
       }
     ]
   ],
