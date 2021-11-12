@@ -38,20 +38,20 @@
 #       #     FOLDER: docs/.vuepress/dist # 要部署的文件夹.
 #       #     BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist && echo 'xugaoyi.com' > CNAME && cd - # 部署前要执行的命令（记得cd进入某个目录后，后面要cd -退回开始的目录）
 
-name: CI
-on: [push]
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
+# name: CI
+# on: [push]
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: dong-jianbin/flow-pro-doc
-        TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn && yarn build && cd docs/.vuepress/dist && echo flowpro.ddoogg.cn' > CNAME && cd -
-        BUILD_DIR: docs/.vuepress/dist/
+#     - name: Build and Deploy
+#       uses: jenkey2011/vuepress-deploy@master
+#       env:
+#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#         TARGET_REPO: dong-jianbin/flow-pro-doc
+#         TARGET_BRANCH: gh-pages
+#         BUILD_SCRIPT: yarn && yarn build && cd docs/.vuepress/dist && echo flowpro.ddoogg.cn' > CNAME && cd -
+#         BUILD_DIR: docs/.vuepress/dist/
