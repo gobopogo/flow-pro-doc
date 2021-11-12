@@ -159,6 +159,7 @@ module.exports = {
       {
         transformer: (timestamp, lang) => {
           const dayjs = require('dayjs') // https://day.js.org/
+          dayjs.locale('zh-cn')
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
       }
