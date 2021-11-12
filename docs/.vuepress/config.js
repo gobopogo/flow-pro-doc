@@ -158,7 +158,8 @@ module.exports = {
       '@vuepress/last-updated', // "上次更新"时间格式
       {
         transformer: (timestamp, lang) => {
-          const dayjs = require('dayjs') // https://day.js.org/
+          const dayjs = require('dayjs')
+          require('dayjs/locale/de')
           dayjs.locale('zh-cn')
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
