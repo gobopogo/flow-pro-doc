@@ -82,12 +82,5 @@ postList: none
 在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/dong-jianbin/flow-pro/issues)。
 你也可以在 Issue 查看别人提的问题和给出解决方案。
 
-或者加入我们的 QQ 交流群：
-
-::: center
-<img src="https://cdn.jsdelivr.net/gh/dong-jianbin/drawing-bed/img/2021110920637.png" alt="群号: 536052639" class="no-zoom" style="width:200px;">
-
-#### Flow-pro 官方 QQ 群: 536052639
-
 :::
 <Vssue :options="{ locale: 'zh' }"/>
